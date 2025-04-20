@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>ML page</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.svg') }}" />
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/LineIcons.3.0.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tiny-slider.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/glightbox.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+
+</head>
+
+<body>
+
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="nav-inner">
+                        <!-- Start Navbar -->
+                        <nav class="navbar navbar-expand-lg">
+                            
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a href="#home" class="active" aria-label="Toggle navigation">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#features" aria-label="Toggle navigation">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#product" aria-label="Toggle navigation">Product</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#contact" aria-label="Toggle navigation">Contact</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                            <div class="button">
+                                <a href="{{ url_for('login') }}" class="btn">Login</a>
+                            </div>
+                        </nav>
+                        <!-- End Navbar -->
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Start Hero Area -->
+    <section id= "home" class="hero-area">
+        <img class="hero-shape" src="{{ url_for('static', filename='images/hero/hero-shape.svg') }}" alt="#">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="hero-content">
+                        <h4 class="wow fadeInUp animate-text" data-wow-delay=".2s">
+                            Transforming Wastewater Treatment with AI
+                        </h4>
+                        
+                        <style>
+                            .animate-text {
+                                font-size: 35em; /* 10 times bigger */
+                                font-weight: bold;
+                                color: #ffffff; /* Bright white text */
+                                text-transform: uppercase;
+                                letter-spacing: 5px;
+                                text-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8), 
+                                             0px 0px 40px rgba(0, 255, 255, 0.6), 
+                                             0px 0px 60px rgba(0, 255, 255, 0.4);
+                            }
+                        
+                            /* Animation for neon glow */
+                            @keyframes neonGlow {
+                                0% {
+                                    text-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8), 
+                                                 0px 0px 40px rgba(0, 255, 255, 0.6), 
+                                                 0px 0px 60px rgba(0, 255, 255, 0.4);
+                                }
+                                50% {
+                                    text-shadow: 0px 0px 30px rgba(0, 255, 255, 1), 
+                                                 0px 0px 50px rgba(0, 255, 255, 0.8), 
+                                                 0px 0px 70px rgba(0, 255, 255, 0.6);
+                                }
+                                100% {
+                                    text-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8), 
+                                                 0px 0px 40px rgba(0, 255, 255, 0.6), 
+                                                 0px 0px 60px rgba(0, 255, 255, 0.4);
+                                }
+                            }
+                        
+                            .animate-text {
+                                animation: neonGlow 1.5s infinite alternate ease-in-out;
+                            }
+                        </style>
+                        
+                        
+                        <h1 class="wow fadeInUp" data-wow-delay=".4s">Embrace the <br> power of  
+                            <span>
+                                <img class="text-shape" src="{{ url_for('static', filename='images/hero/text-shape.svg') }}" alt="#">
+                                AI in wastewater treatment.
+                            </span>
+                        </h1>
+                        
+                        <p class="wow fadeInUp" data-wow-delay=".6s">Leverage AI-powered analytics to enhance wastewater treatment,<br> optimize processes, and drive sustainability.</p>
+
+                        <div class="button wow fadeInUp" data-wow-delay=".8s">
+                            <a href="about-us.html" class="btn ">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-12">
+                    <div class="hero-image">
+                        <img class="main-image" src="{{ url_for('static', filename='images/hero/home2-bg.png') }}" alt="#">
+                        <img class="h2-move-1" src="{{ url_for('static', filename='images/hero/h2-bit-l.png') }}" alt="#">
+                        <img class="h2-move-2" src="{{ url_for('static', filename='images/hero/h2-bit-m.png') }}" alt="#">
+                        <img class="h2-move-3" src="{{ url_for('static', filename='images/hero/h2-bit-s.png') }}" alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Area -->
+
+    <!-- Start Feature Area -->
+    <div id = "features" class="feature section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h3 class="wow zoomIn" data-wow-delay=".2s">Why choose us</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Our features</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">AI-driven wastewater treatment ensures efficiency, reduces waste,<br> and promotes environmental sustainability.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="feature-box">
+                        <div class="tumb">
+                            <img src="{{ url_for('static', filename='images/features/feature-icon-1.png') }}" alt="">
+                        </div>
+                        <h4 class="text-title">AI-Powered Optimization</h4>
+<p>Enhance wastewater treatment efficiency with AI-driven predictive analytics and automation.</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".4s">
+    <div class="feature-box">
+        <div class="tumb">
+            <img src="{{ url_for('static', filename='images/features/feature-icon-2.png') }}" alt="Flask Logo">
+        </div>
+        <h4 class="text-title">Real-Time Monitoring</h4>
+        <p>AI-driven sensors ensure continuous quality checks and compliance with environmental regulations.</p>
+    </div>
+</div>
+<div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".6s">
+    <div class="feature-box">
+        <div class="tumb">
+            <img src="{{ url_for('static', filename='images/features/feature-icon-3.png') }}" alt="Flask Logo">
+        </div>
+        <h4 class="text-title">Smart Decision Making</h4>
+        <p>Leverage machine learning to optimize treatment processes and maximize resource recovery.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Features Area -->
+
+    <!-- Start Footer Area -->
+    <footer id="contact" class="footer section">
+        <!-- Start Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <!-- Single Widget -->
+                            <div class="single-footer f-about">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="{{ url_for('static', filename='images/logo/logo.png') }}" alt="#">
+                                    </a>
+                                </div>
+                                <p>Revolutionizing wastewater treatment with AI-driven solutions for a cleaner, more sustainable future</p>
+                                <h4 class="social-title">Follow Us On:</h4>
+                                <ul class="social">
+                                    <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-pinterest"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-12">
+                            <!-- Single Widget -->
+                            <div class="single-footer f-link">
+                                <h3>Solutions</h3>
+                                <ul>
+                                    <li><a href="javascript:void(0)">Marketing</a></li>
+                                    <li><a href="javascript:void(0)">Analytics</a></li>
+                                    <li><a href="javascript:void(0)">Commerce</a></li>
+                                    <li><a href="javascript:void(0)">Insights</a></li>
+                                </ul>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-12">
+                            <!-- Single Widget -->
+                            <div class="single-footer f-link">
+                                <h3>Support</h3>
+                                <ul>
+                                    <li><a href="javascript:void(0)">Pricing</a></li>
+                                    <li><a href="javascript:void(0)">Documentation</a></li>
+                                    <li><a href="javascript:void(0)">Guides</a></li>
+                                    <li><a href="javascript:void(0)">API Status</a></li>
+                                </ul>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <!-- Single Widget -->
+                            <div class="single-footer newsletter">
+                                <h3>Subscribe</h3>
+                                <p>Subscribe to our newsletter for the latest updates</p>
+                                <form action="#" method="get" target="_blank" class="newsletter-form">
+                                    <input name="EMAIL" placeholder="Email address" required="required" type="email">
+                                    <div class="button">
+                                        <button class="sub-btn"><i class="lni lni-envelope"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Top -->
+        <!-- Start Copyright Area -->
+        <div class="copyright-area">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <p class="copyright-text">© giri services - All Rights Reserved</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <p class="copyright-owner">Designed and Developed by GIRI 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright Area -->
+    </footer>
+    <!--/ End Footer Area -->
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/tiny-slider.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/glightbox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/count-up.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        //========= Road Map 
+        tns({
+            container: '.road-map-slider',
+            items: 1,
+            slideBy: 'page',
+            autoplay: false,
+            mouseDrag: true,
+            gutter: 0,
+            nav: true,
+            controls: false,
+            responsive: {
+                0: {
+                    items: 2,
+                },
+                540: {
+                    items: 3,
+                },
+                768: {
+                    items: 4,
+                },
+                992: {
+                    items: 4,
+                },
+                1170: {
+                    items: 6,
+                }
+            }
+        });
+
+        //========= testimonial 
+        tns({
+            container: '.testimonial-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            mouseDrag: true,
+            gutter: 0,
+            nav: true,
+            controls: false,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                540: {
+                    items: 1,
+                },
+                768: {
+                    items: 2,
+                },
+                992: {
+                    items: 2,
+                },
+                1170: {
+                    items: 3,
+                }
+            }
+        });
+
+        //====== counter up 
+        var cu = new counterUp({
+            start: 0,
+            duration: 2000,
+            intvalues: true,
+            interval: 100,
+            append: " ",
+        });
+        cu.start();
+
+        //========= glightbox
+        GLightbox({
+            'href': 'https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM',
+            'type': 'video',
+            'source': 'youtube', //vimeo, youtube or local
+            'width': 900,
+            'autoplayVideos': true,
+        });
+
+    </script>
+</body>
+
+</html>

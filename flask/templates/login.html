@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email & OTP Verification</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(90deg, #1E3C72, #2A5298, #00AEEF, #1E3C72);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .box {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 380px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            color: #1E3C72;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        input:focus {
+            border-color: #00AEEF;
+            box-shadow: 0 0 5px rgba(0, 174, 239, 0.5);
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #1E3C72;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #00AEEF;
+        }
+        .message {
+            color: red;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h2>Email & OTP Verification</h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <p class="message">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form method="post">
+        <input type="email" name="email" placeholder="Enter your email" value="{{ session.get('email', '') }}" {% if show_otp_field %}readonly{% endif %} required>
+        {% if not show_otp_field %}
+            <button type="submit" name="submit_email">Submit</button>
+        {% endif %}
+        {% if show_otp_field %}
+            <input type="text" name="otp" placeholder="Enter OTP" required>
+            <button type="submit" name="verify_otp">Verify OTP</button>
+        {% endif %}
+    </form>
+</div>
+</body>
+</html>
